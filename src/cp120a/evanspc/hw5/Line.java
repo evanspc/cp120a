@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 
 class Line extends Shape {
-	//constructor
-	Line(ArrayList<Double> points)
-	{
-		
+	public Point p1;
+	public Point p2;
+	
+	public Line(Point p1, Point p2) {
+		this.p1 = p1;
+		this.p2 = p2;
 	}
 	
 	// following, my old constructor based on four doubles
@@ -49,13 +51,14 @@ class Line extends Shape {
 	// HOWTO "abs" double abs(double d)
 	@Override
 	public double getLength (){
-		double x_sum = java.lang.Math.abs(x2 - x1);
-		double y_sum = java.lang.Math.abs(y2 - y1);
-		double x_sq = x_sum * x_sum;
-		double y_sq = y_sum * y_sum;
-		double xy_sum = x_sq + y_sq;
-		double linelength = java.lang.Math.sqrt(xy_sum);
-		return linelength;
+		return 0.0;
+//		double x_sum = java.lang.Math.abs(x2 - x1);
+//		double y_sum = java.lang.Math.abs(y2 - y1);
+//		double x_sq = x_sum * x_sum;
+//		double y_sq = y_sum * y_sum;
+//		double xy_sum = x_sq + y_sq;
+//		double linelength = java.lang.Math.sqrt(xy_sum);
+//		return linelength;
 	}
 
 
@@ -71,10 +74,11 @@ class Line extends Shape {
 	
 	double move_x, move_y;
 	public double move(double move_x, double move_y){
-		double new_x = x1 + move_x;
-		double new_y = y1 + move_y;
-		//RK: best way to return two doubles?
-		return new double[] {new_x, new_y};
+//		double new_x = x1 + move_x;
+//		double new_y = y1 + move_y;
+//		//RK: best way to return two doubles?
+//		return new double[] {new_x, new_y};
+		return 0.0;
 	}
 
 	public void setName(String name) {

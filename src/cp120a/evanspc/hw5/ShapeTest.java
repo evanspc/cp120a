@@ -15,9 +15,10 @@ public class ShapeTest {
 		pointA.setName("pointA");		
 		coords.add(new Point(0,0));
 		coords.add(new Point(1,0));
-		coords.add(new Point(1,1));
+		//coords.add(new Point(1,1));
 
-		Line lineA = new Line(coords);
+		// TODO:  What two coordinates?
+		Line lineA = new Line(coords.get(0),coords.get(1));
 		lineA.setName("lineA");
 		lineA.move(40, 0);
 
