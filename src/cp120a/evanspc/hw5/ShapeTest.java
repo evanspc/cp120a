@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class ShapeTest {
 
 	public static void main(String[] args) throws NoSuchMethodException{		
-		// TODO ^ need a better exception
+		// TODO ^ need a better exception  
 		ArrayList<Point> coords = new ArrayList<>();
 
 		Point pointA = new Point(1000,1000);
