@@ -1,6 +1,6 @@
 package cp120a.evanspc.hw5;
 
-public class Shape implements Moveable, Named {
+public class Shape implements Movable, Named {
 	// TODO
 	// still need to implement center point
 
@@ -52,15 +52,24 @@ public class Shape implements Moveable, Named {
 		return null;
 	}
 
+	// Interface Named
 	@Override
 	public void setName(String name) {
 		this.name = name;
 
 	}
 
+	// Interface Named
 	@Override
 	public String getName() {
 		return name;
+	}
+
+	// Interface Movable
+	@Override
+	public void move(double deltaX, double deltaY) {
+		// TODO implement interface Movable
+
 	}
 
 }
