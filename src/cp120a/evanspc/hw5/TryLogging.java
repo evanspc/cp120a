@@ -11,7 +11,7 @@ public class TryLogging {
 
 	public static void main(String[] args) throws SecurityException, IOException {
 		TryLogging tl = new TryLogging();
-		FileHandler fileHandler = new FileHandler("myLogFile.txt");
+		FileHandler fileHandler = new FileHandler("cp120a_evanspc_hw5_log.xml");
 		ConsoleHandler consoleHandler = new ConsoleHandler();
 		logger.addHandler(fileHandler);
 		logger.addHandler(consoleHandler);
@@ -23,14 +23,14 @@ public class TryLogging {
 
 	}
 
-	private static final Logger logger = Logger.getLogger("hw5and6");
+	private static final Logger logger = Logger.getLogger("hw5");//hw5 is way of naming
 
 	private void doIt() {
 		logger.entering("TryLogging", "doIt");
-		logger.info("I am in doing");
+		logger.info("I am in doIt");
 		try
 		{
-			throw new Exception("happens at doIt");
+			throw new Exception("thrown exception in try in doIt");
 		}catch (Exception e){
 			logger.throwing(this.getClass().getName(), "doIt", e);
 		}

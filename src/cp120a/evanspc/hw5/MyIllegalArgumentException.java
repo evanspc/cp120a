@@ -2,6 +2,10 @@ package cp120a.evanspc.hw5;
 
 public class MyIllegalArgumentException extends Exception {
 	
+	/**I guess it wants a versionUID, so to rid Eclipse of the dreaded yellow gutter...
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static int numExceptions = 0;
 
 	public MyIllegalArgumentException() {
@@ -41,6 +45,10 @@ public class MyIllegalArgumentException extends Exception {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	private static void doIt() throws Exception {
+		Exception e = new Exception("trouble afoot");
+		throw e;
 	}
 
 }

@@ -9,6 +9,7 @@ class Line extends Shape {
 	public Point y1;
 	public Point x2;
 	public Point y2;
+	
 
 	public static final Logger logger = Logger.getLogger("cp120a_evanspc_hw5");
 
@@ -24,11 +25,19 @@ class Line extends Shape {
 		this.y1 = points.get(1);
 		this.x2 = points.get(2);
 		this.y2 = points.get(3);
+		
 	}
 
+	  public Line(Point x, Point y) {
+//	    this.x = x;
+//	    this.y = y;
+	  }
+	  
 	public void move(double deltaX, double deltaY) {
 		x1.move(deltaX, deltaY);
 		y1.move(deltaX, deltaY);
+		x2.move(deltaX, deltaY);
+		y2.move(deltaX, deltaY);
 	}
 
 	public Line(ArrayList<Point> coords) {
@@ -40,8 +49,8 @@ class Line extends Shape {
 	// HOWTO "abs" double abs(double d)
 	@Override
 	public double getLength() {
-		 double x_sum = java.lang.Math.abs(x2 - x1);
-		 double y_sum = java.lang.Math.abs(y2 - y1);
+		 double x_sum = java.lang.Math.abs(x2.getX() - x1.getX());
+		 double y_sum = java.lang.Math.abs(y2.getY() - y1.getY());
 		 double x_sq = x_sum * x_sum;
 		 double y_sq = y_sum * y_sum;
 		 double xy_sum = x_sq + y_sq;

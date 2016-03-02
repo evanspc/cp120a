@@ -22,10 +22,10 @@ public class Point extends Shape {
 	}
   
 // now deprecated, though conceptually simpler... 
-//  public Point(double x, double y) {
+  public Point(double x, double y) {
 //    this.x = x;
 //    this.y = y;
-//  }
+  }
 
 
   @Override

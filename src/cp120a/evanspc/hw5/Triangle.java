@@ -19,18 +19,22 @@ class Triangle extends Shape
 		this.b3 = b3;
 	}
 
-	@Override
-	public double useLine() {
-		//this is very ugly
-		Line aline = new Line(a1, b1, a2, b2);
-		double lineOne = aline.getLength();
-		Line bline = new Line(a1, b1, a3, b3);
-		double lineTwo = bline.getLength();
-		Line cline = new Line(a3, b3, a2, b2);
-		double lineThree = cline.getLength();
-		//System.out.println("UseLine" + lineOne);
-		return lineOne + lineTwo + lineThree;
+	public Triangle(Point point, Point point2, Point point3) {
+		// TODO Auto-generated constructor stub
 	}
+
+//	@Override
+//	public double useLine() {
+//		//this is very ugly
+//		Line aline = new Line(a1, b1, a2, b2);
+//		double lineOne = aline.getLength();
+//		Line bline = new Line(a1, b1, a3, b3);
+//		double lineTwo = bline.getLength();
+//		Line cline = new Line(a3, b3, a2, b2);
+//		double lineThree = cline.getLength();
+//		//System.out.println("UseLine" + lineOne);
+//		return lineOne + lineTwo + lineThree;
+//	}
 	@Override
 
 	public double getArea ()
@@ -60,6 +64,12 @@ class Triangle extends Shape
 	    result[1] = ycenter;
 	    //System.out.println("xcenter" + xcenter + " ycenter" + ycenter);
 	    return result;
+	}
+
+	@Override
+	public void move(double deltaX, double deltaY) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
