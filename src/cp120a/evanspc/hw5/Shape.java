@@ -1,10 +1,8 @@
 package cp120a.evanspc.hw5;
 
-public class Shape implements Movable, Named {
-	// TODO
-	// still need to implement center point
+public abstract class Shape implements Movable, Named {
 
-	public String name;
+	private String name;
 
 	public Shape() {
 	}
@@ -67,9 +65,10 @@ public class Shape implements Movable, Named {
 
 	// Interface Movable
 	@Override
-	public void move(double deltaX, double deltaY) {
-		// TODO implement interface Movable
-
-	}
+	// abstract, as class
+	public abstract void move(double deltaX, double deltaY);
+		// nothing here, just to fulfill interface requirement
+		// sub-classes must do the actual work
+	
 
 }
