@@ -1,18 +1,12 @@
 package cp120a.evanspc.project;
 
-import static org.junit.Assert.*;
-
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Hashtable;
+import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.sun.javafx.collections.MappingChange.Map;
 
 public class EComDBTest {
 
@@ -58,9 +52,8 @@ public class EComDBTest {
 		edb = new EComDB();
 		edb.addCustomer(Jack);
 		edb.addCustomer(Jill);
-		//UNDO
-//		edb.addProduct(samsungS7);
-//		edb.addProduct(iphoneS7);
+		edb.addProduct(samsungS7);
+		edb.addProduct(iphoneS7);
 	}
 
 	@AfterClass

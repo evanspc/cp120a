@@ -15,9 +15,13 @@ public class Customer {
 		setBillingAddress(billing);
 		setShippingAddress(shipping);
 		// get current id to add to record
-		this.id = getId();
+		id = getId();
 	}
 
+	public static void main(String[] args) {
+		//
+		
+	}
 	// counter var
 	public static int idCounter = 1;
 
@@ -25,6 +29,7 @@ public class Customer {
 		idCounter++;
 	}
 
+	// better not to be public, should be done in constructor
 	public int getId() {
 		return idCounter;
 	}
